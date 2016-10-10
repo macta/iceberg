@@ -1,0 +1,2 @@
+## Synchronize a repository
+To synchronize two repositories means to ensure that they have both the same version(s) of the code. When we talk about synchronizing *one repository* means to synchronize it with one of its *upstreams*.
