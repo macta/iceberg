@@ -1,3 +1,8 @@
+### Local and remote repositories
+To work with git you always need a *local* repository (which is different from the code you see on your disk, that is not the repository, that is just your [working copy]). Normally your local repository will be related with (at least) one *remote repository*, which are used for some operations such as *pull* and *push*.
+
+### Working copy
+
 ### Commit-ish
 A commit-ish is a string that allows to specify a commit. Git command line tools usually when they need to operate on a commit they require to operate on a commit they accept several ways of specifying it, such as a or tag name, a SHA1 commit id, and several fatality-like combinations of symbols such as HEAD^, @{u} or master~2.
 
@@ -22,5 +27,3 @@ The following table contains examples for each commit-ish expression. A complete
 | 14. :/<text>              | :/fix nasty bug
 ----------------------------------------------------------------------
 ```
-
-### Local and remote repositories
