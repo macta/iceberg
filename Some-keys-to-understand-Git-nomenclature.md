@@ -13,6 +13,8 @@ So, to commit changes to your local repository, two actions are needed:
 1. `git add someFileOrDirectory` will add `someFileOrDirectory` to the index. 
 2. `git commit` will create a new commit out of the contents of the index, which will be added to your local repository and to the current branch.
 
+> When using iceberg, you normally do not need to think about the index, Iceberg will handle it for you. Still, you might need to be aware that the index is part of the git repository, so if you have other tools working with the same repository there might be conflicts between them.
+
 ### Commit-ish
 A commit-ish is a string that allows to specify a commit. Git command line tools usually when they need to operate on a commit they require to operate on a commit they accept several ways of specifying it, such as a or tag name, a SHA1 commit id, and several fatality-like combinations of symbols such as HEAD^, @{u} or master~2.
 
