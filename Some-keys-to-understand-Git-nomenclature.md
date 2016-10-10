@@ -1,5 +1,5 @@
 ### Local and remote repositories
-To work with git you always need a *local* repository (which is different from the code you see on your disk, that is not the repository, that is just your #working-copy). Normally your local repository will be related with (at least) one *remote repository*, which are used for some operations such as *pull* and *push*.
+To work with git you always need a *local* repository (which is different from the code you see on your disk, that is not the repository, that is just your [working copy](#working-copy)). Normally your local repository will be related with (at least) one *remote repository*, which are used for some operations such as *pull* and *push*.
 
 ### Working copy
 
