@@ -1,7 +1,17 @@
 ### Local and remote repositories
-To work with git you always need a *local* repository (which is different from the code you see on your disk, that is not the repository, that is just your [working copy](#working-copy)). Normally your local repository will be related with (at least) one *remote repository*, which are used for some operations such as *pull* and *push*.
+To work with git you always need a *local* repository (which is different from the code you see on your disk, that is not the repository, that is just your [working copy](#The-working-copy)). 
 
-### Working copy
+Most frequently your local repository will be related with one *remote repository* which is called *origin* and will be the default target for *pull* and *push*.
+
+### The working copy
+It is important not to confuse the code in your disk with a the repository itself. The repository has a lot more information, such as known branches, history of commits, remote repositories, the git [index](The-git-index) and much more. Normally this information is kept in a directory named `.git`. The contents of the repository (that you see on your disk) are just a *working copy* of the contents in the repository.
+
+### The git index
+The index is an intermediate structure which is used to select the contents that are going to be commited. 
+
+So, to commit changes to your local repository, two actions are needed: 
+1. `git add someFileOrDirectory` will add `someFileOrDirectory` to the index. 
+2. `git commit` will create a new commit out of the contents of the index, which will be added to your local repository and to the current branch.
 
 ### Commit-ish
 A commit-ish is a string that allows to specify a commit. Git command line tools usually when they need to operate on a commit they require to operate on a commit they accept several ways of specifying it, such as a or tag name, a SHA1 commit id, and several fatality-like combinations of symbols such as HEAD^, @{u} or master~2.
