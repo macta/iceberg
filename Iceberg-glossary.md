@@ -1,5 +1,5 @@
 ## Synchronize a repository
-To synchronize two repositories means to ensure that they have both the same version(s) of the code. When we talk about synchronizing *one repository* means to synchronize it with [(one of) its remote repository(ies)](../Some-keys-to-understand-Git-nomenclature#local-and-remote-repositories).
+To synchronize two repositories means to ensure that they have both the same version(s) of the code. When we talk about synchronizing *one repository* means to synchronize it with [(one of) its remote repository(ies)](Some-keys-to-understand-Git-nomenclature#local-and-remote-repositories).
 
 Synchronizing can implicate several actions:
 * (First) commit local changes (i.e. save code from your image into your local repository, in the form of a new commit).
