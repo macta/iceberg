@@ -3,6 +3,9 @@ To work with git you always need a *local* repository (which is different from t
 
 Most frequently your local repository will be related with one *remote repository* which is called *origin* and will be the default target for *pull* and *push*.
 
+### Upstream
+The upstream of a branch is a remote branch which is the default source when you *pull* and the default target when you *push*. Most probably is a branch with the same name in your *origin* remote repository.
+
 ### The working copy
 It is important not to confuse the code in your disk with a the repository itself. The repository has a lot more information, such as known branches, history of commits, remote repositories, the git [index](The-git-index) and much more. Normally this information is kept in a directory named `.git`. The contents of the repository (that you see on your disk) are just a *working copy* of the contents in the repository.
 
