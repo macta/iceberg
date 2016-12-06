@@ -1,4 +1,4 @@
-Here 
+Hi, this is work in progress. You could also contribute by expanding the description of these ideas :) 
 
 #Three way merge tool
 
