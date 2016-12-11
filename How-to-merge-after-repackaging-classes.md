@@ -42,3 +42,63 @@ And checkout the code in a new local branch:
 ```
  git co -b to-be-merged pull-request/dev-0.4
 ```
+
+Now go back to Pharo.
+
+## See the real changes
+This assumes that your HEAD branch contains the repackaged code, and your target branch contains changes that you want to merge. If you the Iceberg **History Browser** you will see that it is not able to merge across the repackaging. So let's try something else.
+
+In a Playground you can do:
+```
+"Look for the repository you want to work on:"
+repository := IceRepository registry detect: [:repo | repo name = 'iceberg'].
+
+"Look for the branch that you want to merge into your HEAD."
+targetBranch := repository allBranches detect: [ :br | br name = 'to-be-merged' ].
+
+target := targetBranch lastCommit.
+
+"Look for the merge base between your target commit and your current HEAD. "
+mergeBase := repository mergeBaseWith: target.
+
+"Create a diff between the target and the merge base, and open a browser on it."
+diff := IceDiff from: target to: mergeBase.
+IceGlamourChangesTree openOn: diff.
+```
+
+The browser should be showing exactly the chagnes done in the target branch. The repackaging is not a problem so far. 
+
+## Load the changes
+Once you've verified that the diff object contains the changes that you want to merge, you can load them into your image:
+```
+allChanges := diff elements flatCollect: #changes.
+
+loader := MCPackageLoader new.
+allChanges do: [ :op | op applyTo: loader ].
+loader load.
+```
+
+And your changes are now merged, you can open another diff view to verify:
+```
+IceGlamourChangesTree openOn: repository workingCopyDiff.
+```
+
+You should see the same elements as in the first changes tree, but now they are shown in the new packages.
+> Please note that if you closed the first changes tree, you still can reopen it doing the same steps.
+
+## Commit
+The normal Iceberg commit UI will not be useful, because he does not know about the merge you did, so we have to commit manually. There could be other ways to do this, in this case I decided to create a new branch to hold the merge:
+
+```
+"Create and checkout a new branch, you could skip this."
+repository createBranch: 'merged'.
+
+"Commit marking the target commit as 'merged'"
+repository commitPackagesAndMarkAsMerged: target.
+
+"Push could be done from the normal Iceberg UI, but since we are here..."
+repository push.
+```
+
+# Conclusion
+This provides a basic mechanism to perform somewhat complex merges using Iceberg and git. As further work we should think about how to incorporate this ideas into a nice GUI and also how all this applies to non-git repositories. 
