@@ -1,9 +1,9 @@
 Hi, this is work in progress. You could also contribute by expanding the description of these ideas :) 
 
-#Three way merge tool
+# Three way merge tool
 
-#Handle comparisons
-Image - Loaded Code - Working Copy - Head branch - Upstream
+The existing merge tool does a three way merge but is quite limited from a UI point of view.
+ - the common ancestor version is not shown
+ - we cannot edit in-place the merge
 
-#Tree/graph history viewer
-Show the history of old commits and branches in a graphical tool.
+# See the issue tracker for more ideas!
