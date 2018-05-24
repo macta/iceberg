@@ -1,4 +1,4 @@
-# Why do we still have a disk working copy?
+## Why do we still have a disk working copy?
 
 Well, this is not really necessary for iceberg to work. Iceberg could just write source code directly on git's BLOB, as Thierry mentioned in the other thread.
 The reason for this working copy to be there is just to try to be less alien.
@@ -13,7 +13,7 @@ It will take care of transparently synchronizing your disk working copy when:
  - you change branches
  - you pull/push/merge
 
-# Why don't we dump code into the disk as we write it?
+## Why don't we dump code into the disk as we write it?
 
 The main reason behind it is that the image is not causally connected to the directory in disk, as Ben implied.
 There is not a 1 to 1 correspondence between what you could ever have in disk and your running image.
