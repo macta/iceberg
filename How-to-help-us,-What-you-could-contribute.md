@@ -8,6 +8,15 @@ Probably the easiest in the list. This could be split into several different mil
 3. UI support
 4. Metacello support. Identify that a commitish and a tag are aliases to the same commit to avoid false positives in conflict detection.
 
+## Support Exporting without commiting
+
+There is no UI support for this, but it is doable from the backend, though not correctly exposed right now.
+
+You can right-click on the repository -> Extras -> Inspect
+```
+repository index updateDiskWorkingCopy: repository workingCopy workingCopyDiff.
+```
+
 # OAuth token authentication support
 
 https://stackoverflow.com/questions/25409700/using-gitlab-token-to-clone-without-authentication
