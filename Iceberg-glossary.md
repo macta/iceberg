@@ -1,10 +1,10 @@
 Git is complicated. Git with images is even more complicated.
 This page introduces the vocabulary used by Iceberg. Part of this vocabulary is Git vocabulary, part of it is Github's vocabulary, part of it is introduced by iceberg.
 
-#### The Disk Working Copy (Git)
+#### Disk Working Copy (Git)
 It is important not to confuse the code in your disk with a the repository itself. The repository has a lot more information, such as known branches, history of commits, remote repositories, the git [index](The-git-index) and much more. Normally this information is kept in a directory named `.git`. The contents of the repository (that you see on your disk) are just a *working copy* of the contents in the repository.
 
-#### The Iceberg Working Copy (Iceberg)
+#### Iceberg Working Copy (Iceberg)
 
 Iceberg also includes an object called the working copy that is not quite the same as Git's working copy.
 Iceberg's working copy represents the code loaded in the image, with the loaded commit and the packages.
