@@ -16,10 +16,6 @@ https://stackoverflow.com/questions/42148841/github-clone-with-oauth-access-toke
 
 Some hostings allow users to generate an authentication token which can then be used to authenticate instead of inserting a user/password. There is a missing UI support for this, and further testing.
 
-# SSH passphrase support
-
-Iceberg handles nowadays only ssh keys without passphrases. We should investigate what changes should be done to libgit to intercept a password request, and to have decent UI support for it also.
-
 # Two-factor authentication
 
 If you have two-factor authentication enabled in your server (e.g., in github), you should be prompted for a code in order to give access to the repository. Iceberg misses support for this.
