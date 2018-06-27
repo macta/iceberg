@@ -1,13 +1,5 @@
 There are several points in which Iceberg could be improved. Some of them are outside our scope because of missing knowledge, some others because missing time. Besides issue fixing and reviews, this page explains several standalon sub-projects in which people could help to improve Iceberg's general quality, while still being a standalone project in itself.
 
-# Support for tags
-
-Probably the easiest in the list. This could be split into several different milestones:
-1. Libgit should be extended with primitives to access tags and their pointed commitish.
-2. Iceberg backend support to get and creates tags per commit.
-3. UI support
-4. Metacello support. Identify that a commitish and a tag are aliases to the same commit to avoid false positives in conflict detection.
-
 # Support Exporting without commiting
 
 There is no UI support for this, but it is doable from the backend, though not correctly exposed right now.
