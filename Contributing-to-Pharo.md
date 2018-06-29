@@ -1,3 +1,2 @@
-This page was moved to Pharo's wiki. The new link can be found in:
+This page has moved to [Pharo's wiki](https://github.com/pharo-project/pharo/wiki/Contribute-a-fix-to-Pharo) where up to date instructions can be found.
 
-https://github.com/pharo-project/pharo/wiki/Contribute-a-fix-to-Pharo

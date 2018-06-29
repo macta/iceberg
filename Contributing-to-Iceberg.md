@@ -1,6 +1,6 @@
-https://youtu.be/yGr5HvVWM0M
 
-This video shows how to contribute to iceberg.
+
+This [video](https://youtu.be/yGr5HvVWM0M) shows how to contribute to iceberg.
 For this, you should update your iceberg installation and then just do a pull request.
 This means that you need to start by forking https://github.com/pharo-vcs/iceberg
 

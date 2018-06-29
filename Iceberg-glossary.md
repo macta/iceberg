@@ -2,7 +2,7 @@ Git is complicated. Git with images is even more complicated.
 This page introduces the vocabulary used by Iceberg. Part of this vocabulary is Git vocabulary, part of it is Github's vocabulary, part of it is introduced by iceberg.
 
 #### Disk Working Copy (Git)
-It is important not to confuse the code in your disk with a the repository itself. The repository has a lot more information, such as known branches, history of commits, remote repositories, the git [index](The-git-index) and much more. Normally this information is kept in a directory named `.git`. The contents of the repository (that you see on your disk) are just a *working copy* of the contents in the repository.
+It is important not to confuse the code in your disk with a the repository itself. The repository has a lot more information, such as known branches, history of commits, remote repositories, the git [index](#The-git-index) and much more. Normally this information is kept in a directory named `.git`. The contents of the repository (that you see on your disk) are just a *working copy* of the contents in the repository.
 
 #### Iceberg Working Copy (Iceberg)
 
@@ -22,6 +22,7 @@ So, to commit changes to your local repository, two actions are needed:
 A commit-ish is a reference that specifies a commit. Git command line tools usually accept several ways of specifying a commit, such as a branch or tag name, a SHA1 commit id, and several fatality-like combinations of symbols such as HEAD^, @{u} or master~2.
 
 The following table contains examples for each commit-ish expression. A complete description of the ways to specify a commit (and other git objects) can be found [here](https://www.kernel.org/pub/software/scm/git/docs/gitrevisions.html#_specifying_revisions). 
+
 ```
 ----------------------------------------------------------------------
 |    Format                 |                Examples
@@ -41,6 +42,7 @@ The following table contains examples for each commit-ish expression. A complete
 | 13. <rev>^{/<text>}       | HEAD^{/fix nasty bug}
 | 14. :/<text>              | :/fix nasty bug
 ----------------------------------------------------------------------
+
 ```
 
 #### Local Repository Missing (Iceberg)
